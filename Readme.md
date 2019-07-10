@@ -1,7 +1,7 @@
 # Личный проект «Седона» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Марина Макаренкова](https://up.htmlacademy.ru/adaptive/17/user/406753).
-* Наставник: `Неизвестно`.
+* Наставник: [Наталья Лоскутова](https://htmlacademy.ru/profile/id33515).
 
 ---
 
