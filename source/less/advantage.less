@@ -1,13 +1,24 @@
 .advantage {
-  background-color: @blue;
+  line-height: 21px;
 }
 
-.advantage-theme {
-  color: @color-main;
-  background-color: @gray;
-}
-
-.advantages__title {
+.advantage__title {
   font-size: 18px;
+  line-height: @base-lineheight;
+}
+
+.advantage--blue {
+  font-weight: 400;
   color: @color-white;
+  background-color: @color-blue;
+}
+
+.advantage--gray {
+  font-weight: 400;
+  color: @color-dark-gray;
+  background-color: @color-gray;
+
+  .advantage__title {
+    color: @color-main;
+  }
 }
