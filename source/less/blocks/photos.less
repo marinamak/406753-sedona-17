@@ -20,3 +20,38 @@
   color: @color-dark-gray;
   text-transform: none;
 }
+
+.photos__list {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: @tablet-width) {
+  .photos__list {
+    width: 648px;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .photos__item {
+    &:first-child {
+      width: 100%;
+    }
+
+    &:nth-child(2,3,4) {
+      width: 50%;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .photos__list {
+    width: 1200px;
+  }
+
+  .photos__item {
+    &:nth-child(2,3,4) {
+      width: 400px;
+    }
+  }
+}

@@ -4,3 +4,20 @@
   font-weight: 400;
   color: @color-dark-gray;
 }
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media (min-width: @tablet-width) {
+  .wrap {
+    flex-direction: row;
+  }
+}

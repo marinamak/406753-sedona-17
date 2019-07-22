@@ -1,8 +1,33 @@
+.main-nav {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
+  min-height: 279px;
+}
+
+.main-nav__toggle {
+  position: absolute;
+  top: 240px;
+  right: 20px;
+  width: 23px;
+  height: 21px;
+}
+
 .main-nav__list {
   padding: 0;
+  margin: 0;
+}
+
+.site-list {
+  display: flex;
+  flex-direction: column;
+  min-height: 223px;
 }
 
 .site-list__item {
+  text-align: center;
+  height: 56px;
   background-color: @color-blue;
 }
 
@@ -10,4 +35,62 @@
   font-size: 18px;
   line-height: 40px;
   color: @color-white;
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav {
+    width: auto;
+    margin: 0;
+    min-height: 56px;
+  }
+
+  .site-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 768px;
+    margin: 0 auto;
+    min-height: 55px;
+  }
+
+  .site-list__item {
+    width: 153px;
+    background-color: @color-white;
+
+    &:nth-child(2) {
+      margin-right: 78px;
+    }
+
+    &:nth-child(3) {
+      margin-left: 78px;
+    }
+  }
+
+  .site-list__link {
+    font-size: @base-fontsize;
+    line-height: @base-lineheight;
+    color: @color-main;
+    min-width: 105px;
+  }
+
+  .main-nav__toggle {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .site-list {
+    width: 1200px;
+  }
+
+  .site-list__item {
+    width: 239px;
+
+    &:nth-child(2) {
+      margin-right: 122px;
+    }
+
+    &:nth-child(3) {
+      margin-left: 122px;
+    }
+  }
 }

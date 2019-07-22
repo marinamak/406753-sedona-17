@@ -8,6 +8,8 @@
 }
 
 .advantage--lead {
+  display: flex;
+  flex-direction: column;
   font-weight: 400;
   color: @color-white;
   background-color: @color-blue;
@@ -20,5 +22,11 @@
 
   .advantage__title {
     color: @color-main;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .advantage--lead {
+    flex-direction: row;
   }
 }
