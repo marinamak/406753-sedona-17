@@ -1,11 +1,16 @@
-.main-content__heading {
-  font-size: @base-fontsize;
-  line-height: @base-lineheight;
-  font-weight: 400;
-  color: @color-dark-gray;
-}
-
 .main-content {
   display: flex;
   flex-direction: column;
+  text-align: center;
+
+  &__heading {
+    font-size: @base-fontsize;
+    line-height: @base-lineheight;
+    font-weight: 400;
+    color: @color-dark-gray;
+  }
+
+  &__intro {
+    margin-top: 45px;
+  }
 }
