@@ -7,3 +7,15 @@
   font-weight: 400;
   color: @color-dark-gray;
 }
+
+.features__list {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: @tablet-width) {
+  .features__list {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
