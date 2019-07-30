@@ -1,20 +1,74 @@
+.photos__wrap {
+  margin-top: 42px;
+  margin-bottom: 32px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.photos__heading {
+  margin-bottom: 35px;
+  text-align: center;
+}
+
 .photos__intro {
   line-height: 24px;
   font-weight: 400;
   color: @color-dark-gray;
+  text-align: center;
+}
+
+.photos__item {
+  margin-top: 22px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.photos__link {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.photos__desc-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.photos__desc {
+  margin-bottom: 11px;
 }
 
 .photos__title {
+  margin: 0;
+  margin-bottom: 10px;
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-left: 20px;
   font-size: @base-fontsize;
   line-height: 24px;
 }
 
+.photos__like {
+  display: flex;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.photos__like-button {
+  width: 23px;
+  height: 21px;
+}
+
 .photos__like-counter {
+  margin: 0;
+  margin-left: 15px;
   font-size: @base-fontsize;
   line-height: 24px;
 }
 
 .photos__author {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-bottom: 20px;
+  padding-right: 20px;
+  padding-left: 20px;
   line-height: 24px;
   font-weight: 400;
   color: @color-dark-gray;
@@ -24,27 +78,65 @@
 .photos__list {
   display: flex;
   flex-direction: column;
+  padding: 0;
 }
 
 @media (min-width: @tablet-width) {
+  .photos__wrap {
+    margin-top: 70px;
+    margin-bottom: 70px;
+    padding: 0 150px;
+    border-bottom: none;
+  }
+
   .photos__list {
+    margin: 0 auto;
     width: 648px;
     flex-direction: row;
     flex-wrap: wrap;
   }
 
+  .photos__desc-wrap {
+    flex-direction: row;
+    justify-content: space-between;
+    min-height: 80px;
+    background-color: #f2f2f2;
+  }
+
   .photos__item {
+    margin: 0;
+    border-bottom: none;
+
     &:first-child {
       width: 100%;
     }
 
     &:nth-child(2,3,4) {
-      width: 50%;
+      .photos__desk-wrap {
+        width: 234px;
+      }
     }
+  }
+
+  .photos__desc {
+    margin-bottom: 0;
+  }
+
+  .photos__link {
+    padding: 0;
+  }
+
+  .photos__like {
+    padding-top: 28px;
+    padding-bottom: 31px;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .photos__wrap {
+    padding: 0 360px;
+  }
+
   .photos__list {
     width: 1200px;
   }
@@ -53,5 +145,11 @@
     &:nth-child(2,3,4) {
       width: 400px;
     }
+  }
+
+  .photos__desc-wrap {
+    min-height: 80px;
+    margin-top: 20px;
+    margin-bottom: 21px;
   }
 }

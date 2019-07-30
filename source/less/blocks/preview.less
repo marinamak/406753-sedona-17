@@ -1,6 +1,7 @@
 .preview {
   min-height: 389px;
   background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-color: @color-blue;
   background-repeat: no-repeat;
   background-position: bottom;
 }
@@ -8,6 +9,13 @@
 .preview__image-slogan {
   position: absolute;
   top: 369px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.preview__image-text {
+  position: absolute;
+  top: 331px;
   left: 50%;
   transform: translate(-50%, 0);
 }
@@ -23,10 +31,22 @@
     height: 350px;
     top: 130px;
   }
+
+  .preview__image-text {
+    top: 151px;
+    width: 458px;
+    height: 78px;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .preview {
     background-image: url("../img/bg-back-desktop@1x.jpg");
+  }
+
+  .preview__image-text {
+    top: 157px;
+    width: 461px;
+    height: 80px;
   }
 }

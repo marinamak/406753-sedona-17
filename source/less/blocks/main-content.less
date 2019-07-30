@@ -4,13 +4,39 @@
   text-align: center;
 }
 
+.main-content__wrapper {
+  min-height: 267px;
+  padding-top: 70px;
+  padding-bottom: 45px;
+  box-sizing: border-box;
+}
+
+.main-content__intro {
+  margin: 0;
+  margin-bottom: 38px;
+}
+
 .main-content__heading {
+  margin: 0;
   font-size: @base-fontsize;
   line-height: @base-lineheight;
   font-weight: 400;
   color: @color-dark-gray;
 }
 
-.main-content__intro {
-  margin-top: 45px;
+@media (min-width: @tablet-width) {
+  .main-content__wrapper {
+    min-height: 206px;
+    padding-top: 50px;
+    padding-bottom: 55px;
+    padding-right: 110px;
+    padding-left: 110px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-content__wrapper {
+    padding-right: 310px;
+    padding-left: 310px;
+  }
 }
