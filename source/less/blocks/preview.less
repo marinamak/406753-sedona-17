@@ -1,29 +1,39 @@
 .preview {
   min-height: 389px;
   background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-size: 768px 389px;
   background-color: @color-blue;
   background-repeat: no-repeat;
   background-position: bottom;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/bg-back-mobile@2x.jpg");
+  }
 }
 
 .preview__image-slogan {
-  margin: 90px 20px;
+  margin: 83px 20px;
 }
 
 .preview__image-text {
-  margin: 52px 47px;
+  margin: 52px 45px;
 }
 
 @media (min-width: @tablet-width) {
   .preview {
     min-height: 518px;
     background-image: url("../img/bg-back-tablet@1x.jpg");
+    background-size: cover;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/bg-back-tablet@2x.jpg");
+    }
   }
 
   .preview__image-slogan {
     width: 460px;
     height: 350px;
-    margin: 77px 155px;
+    margin: 77px 154px;
   }
 
   .preview__image-text {
@@ -36,6 +46,10 @@
 @media (min-width: @desktop-width) {
   .preview {
     background-image: url("../img/bg-back-desktop@1x.jpg");
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/bg-back-desktop@2x.jpg");
+    }
   }
 
   .preview__image-slogan {
