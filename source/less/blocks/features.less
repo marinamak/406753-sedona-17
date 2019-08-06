@@ -32,6 +32,10 @@
   align-items: flex-start;
 }
 
+.features__img {
+  fill: @color-blue;
+}
+
 @media (min-width: @tablet-width) {
   .features__list {
     flex-direction: row;
@@ -54,6 +58,11 @@
     &:nth-child(2) {
       order: 2;
     }
+  }
+
+  .features__img {
+    width: 75px;
+    height: 72px;
   }
 
   .features__wrap {

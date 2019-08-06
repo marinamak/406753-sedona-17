@@ -39,6 +39,7 @@
     "node": "8.16"
   },
   "dependencies": {
+    "cwebp": "^2.0.3",
     "normalize.less": "^1.0.0",
     "object-fit": "^0.4.3"
   }
