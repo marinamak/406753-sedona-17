@@ -39,6 +39,83 @@
         <section class="preview">
           <img class="preview__image-text" src="img/text-sedona.svg" width="229" height="39" alt="Добро пожаловать в Седону">
         </section>
+        <div class="main-content">
+          <div class="main-content__header">
+            <p class="main-content__heading heading">Оставьте свой отзыв</p>
+            <h2 class="main-content__intro intro">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</h2>
+          </div>
+          <form class="form" action="https://echo.htmlacademy.ru" method="post">
+            <fieldset class="form__item write-name">
+              <legend class="write-name__heading heading">Представьтесь:</legend>
+              <p class="write-name__item">
+                <label for="user-name">Имя*:</label>
+                <input id="user-name" type="text" name="username" value="Петр">
+              </p>
+              <p class="write-name__item">
+                <label for="user-surname">Фамилия*:</label>
+                <input id="user-surname" type="text" name="surname" value="Иванов">
+              </p>
+              <p class="write-name__item">
+                <label for="user-patronymic">Отчество:</label>
+                <input id="user-patronymic" type="text" name="patronymic" value="Александрович">
+              </p>
+            </fieldset>
+            <fieldset class="form__item write-contacts">
+              <legend class="write-contacts__heading heading">Контактная информация:</legend>
+              <p class="write-contacts__item">
+                <label for="user-phone">Контактный телефон*:</label>
+                <input id="user-phone" type="text" name="phone" placeholder="Введите телефон">
+              </p>
+              <p class="write-contacts__item">
+                <label for="user-email">Электронная почта*:</label>
+                <input id="user-email" type="email" name="email" placeholder="Введите e-mail">
+              </p>
+            </fieldset>
+            <fieldset class="form__item write-opinion">
+              <legend class="write-opinion__heading heading">Ваше общее впечатление:</legend>
+              <ul class="write-opinin__list">
+                <li class="write-opinin__item">
+                  <input id="opinion-good" type="radio" name="opinion" value="Скорее положительное" checked>
+                  <label for="opinion-good">Скорее положительное</label>
+                </li>
+                <li class="write-opinin__item">
+                  <input id="opinion-bad" type="radio" name="opinion" value="Скорее отрицательное">
+                  <label for="opinion-bad">Скорее отрицательное</label>
+                </li>
+                <li class="write-opinin__item">
+                  <input id="opinion-none" type="radio" name="opinion" value="Затрудняюсь ответить">
+                  <label for="opinion-none">Затрудняюсь ответить</label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="form__item write-sight">
+              <legend class="write-sight__heading heading">Посещенные достопримечательности</legend>
+              <ul class="write-sight__list">
+                <li class="write-sight__item">
+                  <input id="bridge" type="checkbox" name="sight-bridge" checked>
+                  <label for="bridge">Мост Дьявола</label>
+                </li>
+                <li class="write-sight__item">
+                  <input id="mountain" type="checkbox" name="sight-mountain" checked>
+                  <label for="mountain">Гора-Колокол</label>
+                </li>
+                <li class="write-sight__item">
+                  <input id="park" type="checkbox" name="sight-park" checked>
+                  <label for="park">Слайд-парк</label>
+                </li>
+                <li class="write-sight__item">
+                  <input id="rock" type="checkbox" name="sight-rock">
+                  <label for="rock">Красные скалы</label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="form__item write-comment">
+              <legend class="write-comment__heading heading">Опишите свои эмоции:</legend>
+              <textarea id="message" name="message-name">Опишите подробно все свои восторги</textarea>
+            </fieldset>
+          </form>
+          <input class="button" type="submit" value="Отправить отзыв">
+        </div>
       </main>
       <footer class="page-footer">
         <b class="page-footer__tag">#VisitSedona</b>
@@ -46,21 +123,21 @@
           <li class="social-list__item">
             <a class="social-list__link social-list__link--twitter" href="https://twitter.com">
               <svg class="social-list__icon" width="18" height="18">
-                <use xlink:href="#icon-twitter"></use>
+                <use xlink:href="img/sprite.svg#icon-twitter"></use>
               </svg>
             </a>
           </li>
           <li class="social-list__item">
             <a class="social-list__link social-list__link--facebook" href="https://www.facebook.com">
               <svg class="social-list__icon" width="9" height="18">
-                <use xlink:href="#icon-facebook"></use>
+                <use xlink:href="img/sprite.svg#icon-facebook"></use>
               </svg>
             </a>
           </li>
           <li class="social-list__item">
             <a class="social-list__link social-list__link--youtube" href="https://www.youtube.com">
               <svg class="social-list__icon" width="20" height="18">
-                <use xlink:href="#icon-youtube"></use>
+                <use xlink:href="img/sprite.svg#icon-youtube"></use>
               </svg>
             </a>
           </li>
