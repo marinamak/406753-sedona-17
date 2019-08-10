@@ -13,22 +13,21 @@
   width: 23px;
   height: 21px;
   border: none;
-  background-color: transparent;
-  background-image: url("../img/icon-menu.svg");
-  background-repeat: no-repeat;
+
+  &--closed {
+    top: 17px;
+    height: 22px;
+  }
 }
 
-.main-nav__toggle--closed {
-  position: absolute;
-  top: 17px;
-  right: 20px;
-  padding: 0;
-  width: 23px;
-  height: 22px;
-  border: none;
-  background-color: transparent;
-  background-image: url("../img/icon-cross.svg");
-  background-repeat: no-repeat;
+.main-nav__icon-menu {
+  fill: @color-blue;
+  background-color: @color-white;
+}
+
+.main-nav__icon-cross {
+  fill: @color-white;
+  background-color: @color-blue;
 }
 
 .main-nav__list {

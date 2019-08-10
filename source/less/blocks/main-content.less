@@ -4,39 +4,105 @@
   text-align: center;
 }
 
-.main-content__wrapper {
+.main-content__header {
+  position: relative;
   min-height: 267px;
-  padding-top: 70px;
-  padding-bottom: 45px;
+  padding-top: 43px;
+  padding-bottom: 29px;
   box-sizing: border-box;
+
+  &::before {
+    content: url("../img/bg-intro-triangle-mobile.svg");
+    position: absolute;
+    top: -26px;
+    left: 0;
+    width: 100%;
+  }
+
+  &::after {
+    content: url("../img/bg-triangle.svg");
+    background-color: @color-blue;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
 }
 
-.main-content__intro {
-  margin: 0;
-  margin-bottom: 38px;
+.main-content__form-header {
+  position: relative;
+  min-height: 203px;
+  padding-top: 43px;
+  padding-bottom: 20px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #e5e5e5;
+
+  &::before {
+    content: url("../img/bg-intro-triangle-mobile.svg");
+    position: absolute;
+    top: -26px;
+    left: 0;
+    width: 100%;
+  }
 }
 
 .main-content__heading {
   margin: 0;
-  font-size: @base-fontsize;
-  line-height: @base-lineheight;
-  font-weight: 400;
-  color: @color-dark-gray;
+  margin-bottom: 35px;
+}
+
+.main-content__intro {
+  margin: 0 20px;
 }
 
 @media (min-width: @tablet-width) {
-  .main-content__wrapper {
+  .main-content__header {
     min-height: 206px;
     padding-top: 50px;
     padding-bottom: 55px;
     padding-right: 110px;
     padding-left: 110px;
+
+    &::before {
+      content: url("../img/bg-intro-triangle-tablet.svg");
+      top: -57px;
+    }
+
+    &::after {
+      content: "";
+    }
+  }
+
+  .main-content__form-header {
+    min-height: 206px;
+    padding-top: 50px;
+    padding-bottom: 55px;
+    padding-right: 110px;
+    padding-left: 110px;
+
+    &::before {
+      content: url("../img/bg-intro-triangle-tablet.svg");
+      top: -57px;
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
-  .main-content__wrapper {
+  .main-content__header {
     padding-right: 310px;
     padding-left: 310px;
+
+    &::before {
+      content: url("../img/bg-intro-triangle-desktop.svg");
+    }
+  }
+
+  .main-content__form-header {
+    padding-right: 310px;
+    padding-left: 310px;
+
+    &::before {
+      content: url("../img/bg-intro-triangle-desktop.svg");
+    }
   }
 }
