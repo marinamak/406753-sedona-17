@@ -1,3 +1,8 @@
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
 .form__item {
   border: none;
   border-bottom: 1px solid #e5e5e5;
@@ -6,8 +11,51 @@
 .form__button {
   width: 280px;
   min-height: 58px;
+  margin: 0 auto;
   font-size: 21px;
   line-height: @base-lineheight;
   font-weight: @base-fontweight;
   text-transform: @text-transform;
+}
+
+@media (min-width: @tablet-width) {
+  .form {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 60px;
+  }
+
+  .form__item {
+    border-bottom: none;
+
+    &:nth-child(3) {
+      order: 1;
+      width: 324px;
+    }
+
+    &:nth-child(1) {
+      order: 2;
+      width: 267px;
+    }
+
+    &:nth-child(2) {
+      order: 3;
+      width: 648px;
+    }
+
+    &:nth-child(4) {
+      order: 4;
+      width: 648px;
+    }
+
+    &:nth-child(5) {
+      order: 5;
+      width: 648px;
+    }
+  }
+
+  .form__button {
+    order: 6;
+  }
 }
