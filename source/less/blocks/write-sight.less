@@ -1,4 +1,5 @@
 .write-sight {
+  position: relative;
   margin: 0;
   padding: 0;
 }
@@ -9,6 +10,8 @@
 }
 
 .write-sight__list {
+  display: flex;
+  flex-direction: column;
   margin: 0;
   padding: 0;
 }
@@ -69,5 +72,51 @@
 
     border-radius: 3px;
     background-color: #f2f2f2;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .write-sight__heading {
+    padding-right: 120px;
+    padding-left: 120px;
+    padding-bottom: 45px;
+    font-size: 21px;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 45px;
+      left: 0;
+
+      width: 124px;
+      height: 1px;
+
+      background-color: #dbdbdb;
+    }
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: 45px;
+      right: 0;
+
+      width: 124px;
+      height: 1px;
+
+      background-color: #dbdbdb;
+    }
+  }
+
+  .write-sight__list {
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding-left: 76px;
+  }
+
+  .write-sight__item {
+    width: 50%;
   }
 }
