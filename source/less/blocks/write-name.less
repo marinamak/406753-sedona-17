@@ -31,6 +31,15 @@
   &--name {
     width: 230px;
   }
+
+  &:hover {
+    background-color: #e5e5e5;
+  }
+
+  &:active {
+    border: 4px solid #e5e5e5;
+    background-color: @color-white;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -48,6 +57,16 @@
 
     &--name {
       width: 216px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .write-name__input {
+    width: 312px;
+
+    &--name {
+      width: 350px;
     }
   }
 }

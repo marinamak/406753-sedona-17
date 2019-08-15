@@ -49,10 +49,16 @@
 .main-content__heading {
   margin: 0;
   margin-bottom: 35px;
+  font-size: 18px;
+  text-align: center;
 }
 
 .main-content__intro {
   margin: 0 20px;
+
+  &--form {
+    line-height: 24px;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -84,6 +90,14 @@
     &::before {
       content: url("../img/bg-intro-triangle-tablet.svg");
       top: -57px;
+    }
+  }
+
+  .main-content__heading {
+    font-size: 21px;
+
+    &--form {
+      font-size: 30px;
     }
   }
 }
