@@ -21,7 +21,7 @@
 
 .video__picture {
   display: block;
-  wdth: 321px;
+  width: 321px;
   height: 201px;
 }
 
@@ -31,11 +31,11 @@
 }
 
 .video__tracker {
-  display: flex;
-  flex-wrap: wrap;
   position: absolute;
   bottom: -66px;
   left: 20px;
+  display: flex;
+  flex-wrap: wrap;
   width: 280px;
   min-height: 111px;
   background-color: rgba(0, 0, 0, 0.6);
@@ -67,9 +67,9 @@
   }
 
   &--scale {
-    order: 0;
-    flex-basis: 100%;
     position: relative;
+    flex-basis: 100%;
+    order: 0;
     margin: 22px 22px;
     width: 235px;
     height: 3px;
@@ -170,8 +170,8 @@
     }
 
     &--scale {
-      order: 1;
       flex-basis: 85%;
+      order: 1;
       margin-top: 45px;
     }
 
@@ -252,9 +252,5 @@
 
   .video__tracker {
     width: 800px;
-  }
-
-  .video__scale {
-    width: 540px;
   }
 }
