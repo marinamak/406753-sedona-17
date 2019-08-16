@@ -1,4 +1,6 @@
 .preview {
+  margin-top: 56px;
+
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-size: 768px 389px;
   background-color: @color-blue;
@@ -20,6 +22,8 @@
 
 @media (min-width: @tablet-width) {
   .preview {
+    margin-top: 0;
+
     min-height: 518px;
     background-image: url("../img/bg-back-tablet@1x.jpg");
     background-size: cover;
@@ -34,15 +38,15 @@
   }
 
   .preview__image-slogan {
+    margin: 77px 154px;
     width: 460px;
     height: 350px;
-    margin: 77px 154px;
   }
 
   .preview__image-text {
+    margin: 95px 153px;
     width: 458px;
     height: 78px;
-    margin: 95px 153px;
   }
 }
 
@@ -64,8 +68,8 @@
   }
 
   .preview__image-text {
+    margin: 101px 369px;
     width: 461px;
     height: 80px;
-    margin: 101px 369px;
   }
 }

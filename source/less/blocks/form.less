@@ -18,6 +18,10 @@
   text-transform: @text-transform;
 }
 
+.form__text {
+  display: none;
+}
+
 @media (min-width: @tablet-width) {
   .form {
     flex-direction: row;
@@ -57,5 +61,46 @@
 
   .form__button {
     order: 6;
+    margin: 0;
+    margin-bottom: 57px;
+  }
+
+  .form__text {
+    display: block;
+    order: 7;
+    font-weight: 400;
+    color: @color-dark-gray;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form {
+    padding: 0 120px;
+  }
+
+  .form__item {
+    &:nth-child(3) {
+      width: 400px;
+    }
+
+    &:nth-child(1) {
+      width: 400px;
+    }
+
+    &:nth-child(2) {
+      width: 960px;
+    }
+
+    &:nth-child(4) {
+      width: 960px;
+    }
+
+    &:nth-child(5) {
+      width: 960px;
+    }
+  }
+
+  .form__button {
+    width: 480px;
   }
 }

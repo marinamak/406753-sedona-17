@@ -1,21 +1,21 @@
 .page-footer {
-  padding-top: 40px;
-  padding-bottom: 23px;
-  box-sizing: border-box;
-  min-height: 243px;
-  width: 320px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  padding-top: 40px;
+  padding-bottom: 23px;
+  width: 320px;
+  min-height: 243px;
+  box-sizing: border-box;
 }
 
 .page-footer__copyright {
-  width: 140px;
-  height: 40px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 140px;
+  height: 40px;
 }
 
 .page-footer__tag {
@@ -30,11 +30,12 @@
 
 @media (min-width: @tablet-width) {
   .page-footer {
+    flex-direction: row;
+    justify-content: space-between;
     width: 648px;
     min-height: 120px;
     margin: 0 60px;
-    flex-direction: row;
-    justify-content: space-between;
+    padding-bottom: 35px;
   }
 }
 

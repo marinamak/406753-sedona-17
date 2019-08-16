@@ -4,7 +4,10 @@
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="preload" href="fonts/ptsans.woff2" as="font">
+    <link rel="preload" href="fonts/ptsansbold.woff2" as="font">
+    <link rel="stylesheet" href="css/style.min.css">
+    <script src="js/picturefill.js" async=""></script>
   </head>
   <body>
     <div style="display:none">
@@ -12,26 +15,8 @@
     </div>
     <div class="container">
       <header class="page-header">
-        <a class="page-header__logo">
-          <picture>
-            <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
-            <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
-            <img class="page-header__logo-image" src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Логотип Седона">
-          </picture>
-        </a>
-        <nav class="main-nav">
-          <button class="main-nav__toggle" type="button">
-            <span class="visually-hidden">Открыть меню</span>
-            <svg class="main-nav__icon-menu" width="23" height="22">
-              <use xlink:href="img/sprite.svg#icon-menu"></use>
-            </svg>
-          </button>
-          <button class="main-nav__toggle main-nav__toggle--closed" type="button">
-            <span class="visually-hidden">Закрыть меню</span>
-            <svg class="main-nav__icon-cross" width="23" height="23">
-              <use xlink:href="img/sprite.svg#icon-cross"></use>
-            </svg>
-          </button>
+        <nav class="main-nav main-nav--opened">
+          <button class="main-nav__toggle main-nav__toggle--closed" type="button"><span class="visually-hidden">Открыть меню</span></button>
           <ul class="main-nav__list site-list">
             <li class="site-list__item site-list__item--active">
               <a class="site-list__link" href="index.html">Главная</a>
@@ -46,6 +31,13 @@
               <a class="site-list__link" href="#">HTML Academy</a>
             </li>
           </ul>
+          <a class="main-nav__logo" href="#">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+              <img class="main-nav__logo-image" src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Логотип Седона">
+            </picture>
+          </a>
         </nav>
       </header>
       <main class="page-main">
@@ -55,7 +47,7 @@
         </div>
         <div class="main-content">
           <div class="main-content__header">
-            <p class="main-content__heading heading">СЕДОНА — небольшой  городок в АРИЗОНЕ,  заслуживающий большего!</p>
+            <p class="main-content__heading">СЕДОНА — небольшой  городок в АРИЗОНЕ,  заслуживающий большего!</p>
             <h2 class="main-content__intro intro">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</h2>
           </div>
           <section class="advantage advantage--lead">
@@ -65,9 +57,12 @@
               <p class="advantage__description">Седона не аттракцион для туристов, там течет своя жизнь</p>
             </div>
             <picture class="advantage__picture">
+              <source type="image/webp" media="(min-width: 1200px)" srcset="img/main-city-desktop@1x.webp 1x, img/main-city-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/main-city-tablet@1x.webp 1x, img/main-city-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/main-city-mobile@1x.webp 1x, img/main-city-mobile@2x.webp 2x">
               <source media="(min-width: 1200px)" srcset="img/main-city-desktop@1x.jpg 1x, img/main-city-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="img/main-city-tablet@1x.jpg 1x, img/main-city-tablet@2x.jpg 2x">
-              <img class="advantage__image" src="img/main-city-mobile@1x.jpg" srcset="img/main-city-mobile@2x.jpg 2x" alt="Настоящий городок">
+              <img class="advantage__image" src="img/main-city-mobile@1x.jpg" srcset="img/main-city-mobile@2x.jpg 2x" width="520" height="260" alt="Настоящий городок">
             </picture>
           </section>
           <section class="features">
@@ -109,9 +104,12 @@
               <p class="advantage__description">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
             </div>
             <picture class="advantage__picture">
+              <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-bridge-desktop@1x.webp 1x, img/photo-bridge-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-bridge-tablet@1x.webp 1x, img/photo-bridge-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/photo-bridge-mobile@1x.webp 1x, img/photo-bridge-mobile@2x.webp 2x">
               <source media="(min-width: 1200px)" srcset="img/photo-bridge-desktop@1x.jpg 1x, img/photo-bridge-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="img/photo-bridge-tablet@1x.jpg 1x, img/photo-bridge-tablet@2x.jpg 2x">
-              <img class="advantage__image" src="img/photo-bridge-mobile@1x.jpg" srcset="img/photo-bridge-mobile@2x.jpg 2x" alt="Мост дьявола">
+              <img class="advantage__image" src="img/photo-bridge-mobile@1x.jpg" srcset="img/photo-bridge-mobile@2x.jpg 2x" width="520" height="260" alt="Мост дьявола">
             </picture>
           </section>
           <div class="wrap">
@@ -132,7 +130,7 @@
             </section>
           </div>
           <section class="main-content__search searching">
-            <p class="searching__heading heading">Заинтересовались?</p>
+            <p class="searching__heading">Заинтересовались?</p>
             <p class="searching__intro intro">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
             <a class="searching__link button" href="hotels.html">Найти гостиницу</a>
           </section>
@@ -177,5 +175,9 @@
         </div>
       </footer>
     </div>
+    <script src="js/object-fit.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/svg4everybody.min.js"></script>
+    <script>svg4everybody();</script>
   </body>
 </html>

@@ -7,6 +7,8 @@
 .video__heading {
   margin: 0;
   padding-bottom: 32px;
+  font-size: 18px;
+  text-align: center;
 }
 
 .video__intro {
@@ -14,29 +16,29 @@
   padding-right: 25px;
   padding-left: 25px;
   padding-bottom: 40px;
+  line-height: 24px;
 }
 
 .video__picture {
   display: block;
+  width: 321px;
   height: 201px;
 }
 
-.video__tracker {
-  position: relative;
-  position: absolute;
-  bottom: 0;
-  left: 20px;
-  width: 280px;
-  min-height: 45px;
-  background-color: rgba(0, 0, 0, 0.6);
+.video__image {
+  width: 100%;
+  height: 100%;
 }
 
-.video__scale {
-  position: relative;
-  margin: 22px 22px;
-  width: 235px;
-  height: 3px;
-  background-color: rgba(255, 255, 255, 0.2);
+.video__tracker {
+  position: absolute;
+  bottom: -66px;
+  left: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 280px;
+  min-height: 111px;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .video__scale-slider {
@@ -48,38 +50,80 @@
 }
 
 .video__settings {
-  position: absolute;
-  top: 100%;
-  width: 280px;
-  min-height: 66px;
-  background-color: #f2f2f2;
+  order: 1;
+
+  &--replay {
+    padding-top: 22px;
+    padding-left: 25px;
+    padding-bottom: 16px;
+    width: 149px;
+    background-color: #f2f2f2;
+  }
+
+  &--fullscreen {
+    padding-top: 23px;
+    padding-right: 23px;
+    background-color: #f2f2f2;
+  }
+
+  &--scale {
+    position: relative;
+    flex-basis: 100%;
+    order: 0;
+    margin: 22px 22px;
+    width: 235px;
+    height: 3px;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  &--subtitles {
+    padding-top: 23px;
+    padding-right: 31px;
+    margin-left: auto;
+    background-color: #f2f2f2;
+  }
 }
 
-.video__replay {
-  position: absolute;
-  top: 67px;
-  left: 25px;
+.video__icon-replay {
   width: 16px;
   height: 20px;
   fill: #5c6870;
+
+  &:hover {
+    fill: @color-dark-gray;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
-.video__subtitles {
-  position: absolute;
-  top: 68px;
-  right: 74px;
+.video__icon-subtitles {
   width: 32px;
   height: 20px;
   fill: #5c6870;
+
+  &:hover {
+    fill: @color-dark-gray;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
-.video__fullscreen {
-  position: absolute;
-  top: 68px;
-  right: 23px;
+.video__icon-fullscreen {
   width: 20px;
   height: 20px;
   fill: #5c6870;
+
+  &:hover {
+    fill: @color-dark-gray;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -95,19 +139,21 @@
     padding-bottom: 78px;
   }
 
+  .video__heading {
+    font-size: 30px;
+  }
+
   .video__picture {
+    width: 648px;
     height: 499px;
   }
 
   .video__tracker {
     left: 0;
+    bottom: 0;
+    flex-wrap: nowrap;
     width: 648px;
     min-height: 93px;
-  }
-
-  .video__scale {
-    margin: 45px 93px;
-    width: 389px;
   }
 
   .video__scale-slider {
@@ -115,25 +161,75 @@
   }
 
   .video__settings {
-    display: none;
+    flex-basis: 5%;
+
+    &--replay {
+      padding-top: 35px;
+      padding-left: 35px;
+      background-color: transparent;
+    }
+
+    &--scale {
+      flex-basis: 85%;
+      order: 1;
+      margin-top: 45px;
+    }
+
+    &--subtitles {
+      padding-top: 36px;
+      background-color: transparent;
+    }
+
+    &--fullscreen {
+      padding-top: 36px;
+      padding-right: 41px;
+      background-color: transparent;
+    }
   }
 
-  .video__replay {
+  .video__icon-replay {
     top: 35px;
     left: 35px;
     fill: @color-white;
+
+    &:hover {
+      fill: @color-white;
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 
-  .video__subtitles {
+  .video__icon-subtitles {
     top: 36px;
     right: 92px;
     fill: @color-white;
+
+    &:hover {
+      fill: @color-white;
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 
-  .video__fullscreen {
+  .video__icon-fullscreen {
     top: 36px;
     right: 41px;
     fill: @color-white;
+
+    &:hover {
+      fill: @color-white;
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 }
 
@@ -150,14 +246,11 @@
   }
 
   .video__picture {
+    width: 800px;
     height: 500px;
   }
 
   .video__tracker {
     width: 800px;
-  }
-
-  .video__scale {
-    width: 540px;
   }
 }

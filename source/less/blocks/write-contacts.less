@@ -1,7 +1,13 @@
 .write-contacts {
+  position: relative;
   margin: 0;
   padding: 0;
   padding-bottom: 10px;
+}
+
+.write-contacts__wrap {
+  display: flex;
+  flex-direction: column;
 }
 
 .write-contacts__item {
@@ -9,26 +15,33 @@
   flex-direction: column;
   align-items: flex-start;
   margin: 0;
-  margin-bottom: 18px;
+  margin-bottom: 15px;
   padding-left: 20px;
 }
 
 .write-contacts__heading {
-  padding-top: 23px;
+  padding-top: 21px;
   padding-left: 22px;
-  padding-bottom: 30px;
+  padding-bottom: 27px;
 }
 
 .write-contacts__label {
-  margin-bottom: 14px;
+  margin-bottom: 10px;
   padding-left: 22px;
+}
+
+.write-contacts__wrapper {
+  display: flex;
 }
 
 .write-contacts__input {
   padding: 0;
   padding-left: 22px;
-  width: 280px;
+  width: 222px;
   min-height: 58px;
+  font-size: 18px;
+  line-height: @base-lineheight;
+  font-weight: @base-fontweight;
   box-sizing: border-box;
   background-color: #f2f2f2;
   border: none;
@@ -39,18 +52,108 @@
     font-weight: @base-fontweight;
     color: @color-main;
   }
+
+  &:hover {
+    background-color: #e5e5e5;
+  }
+
+  &:active {
+    border: 4px solid #e5e5e5;
+    background-color: @color-white;
+  }
+}
+
+.write-contacts__icon {
+  padding: 20px 0;
+  width: 58px;
+  height: 58px;
+  box-sizing: border-box;
+  text-align: center;
+  background-color: #e6e6e6;
 }
 
 @media (min-width: @tablet-width) {
+  .write-contacts {
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 33px;
+      left: 0;
+
+      width: 124px;
+      height: 1px;
+
+      background-color: #dbdbdb;
+    }
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: 33px;
+      right: 0;
+
+      width: 124px;
+      height: 1px;
+
+      background-color: #dbdbdb;
+    }
+  }
+
   .write-contacts__heading {
+    padding-right: 180px;
+    padding-left: 180px;
     font-size: 21px;
   }
 
   .write-contacts__input {
-    width: 648px;
+    width: 590px;
   }
 
   .write-contacts__item {
     padding: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .write-contacts {
+    &::before {
+      width: 280px;
+    }
+
+    &::after {
+      width: 280px;
+    }
+  }
+
+  .write-contacts__wrap {
+    flex-direction: row;
+  }
+
+  .write-contacts__item {
+    flex-direction: row;
+    align-items: center;
+    width: 480px;
+    text-align: left;
+  }
+
+  .write-contacts__input {
+    margin-left: 15px;
+    width: 257px;
+  }
+
+  .write-contacts__phone {
+    display: none;
+  }
+
+  .write-contacts__label {
+    padding-left: 0;
+  }
+
+  .write-contacts__heading {
+    padding-right: 330px;
+    padding-left: 330px;
+    padding-bottom: 78px;
   }
 }
