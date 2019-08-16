@@ -4,7 +4,10 @@
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="preload" href="fonts/ptsans.woff2" as="font">
+    <link rel="preload" href="fonts/ptsansbold.woff2" as="font">
     <link rel="stylesheet" href="css/style.min.css">
+    <script src="js/picturefill.js" async=""></script>
   </head>
   <body>
     <div style="display:none">
@@ -12,26 +15,8 @@
     </div>
     <div class="container">
       <header class="page-header">
-        <a class="page-header__logo" href="index.html">
-          <picture>
-            <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
-            <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
-            <img class="page-header__logo-image" src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Логотип Седона">
-          </picture>
-        </a>
-        <nav class="main-nav">
-          <button class="main-nav__toggle" type="button">
-            <span class="visually-hidden">Открыть меню</span>
-            <svg class="main-nav__icon-menu" width="23" height="22">
-              <use xlink:href="img/sprite.svg#icon-menu"></use>
-            </svg>
-          </button>
-          <button class="main-nav__toggle main-nav__toggle--closed" type="button">
-            <span class="visually-hidden">Закрыть меню</span>
-            <svg class="main-nav__icon-cross" width="23" height="23">
-              <use xlink:href="img/sprite.svg#icon-cross"></use>
-            </svg>
-          </button>
+        <nav class="main-nav main-nav--opened">
+          <button class="main-nav__toggle main-nav__toggle--closed" type="button"><span class="visually-hidden">Открыть меню</span></button>
           <ul class="main-nav__list site-list">
             <li class="site-list__item">
               <a class="site-list__link" href="index.html">Главная</a>
@@ -46,6 +31,13 @@
               <a class="site-list__link" href="#">HTML Academy</a>
             </li>
           </ul>
+          <a class="main-nav__logo" href="index.html">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+              <img class="main-nav__logo-image" src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Логотип Седона">
+            </picture>
+          </a>
         </nav>
       </header>
       <main class="page-main">
@@ -55,16 +47,19 @@
         </section>
         <section class="photos">
           <div class="photos__wrap">
-            <h2 class="photos__heading heading">Фото и видео</h2>
+            <h2 class="photos__heading">Фото и видео</h2>
             <p class="photos__intro intro">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
           </div>
           <ul class="photos__list">
             <li class="photos__item photos__item--lead">
               <a class="photos__link" href="#">
                 <picture class="photos__picture photos__picture--lead">
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-sunset-desktop@1x.webp 1x, img/photo-sunset-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-sunset-tablet@1x.webp 1x, img/photo-sunset-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/photo-sunset-mobile@1x.webp 1x, img/photo-sunset-mobile@2x.webp 2x">
                   <source media="(min-width: 1200px)" srcset="img/photo-sunset-desktop@1x.jpg 1x, img/photo-sunset-desktop@2x.jpg 2x">
                   <source media="(min-width: 768px)" srcset="img/photo-sunset-tablet@1x.jpg 1x, img/photo-sunset-tablet@2x.jpg 2x">
-                  <img class="photos__image" src="img/photo-sunset-mobile@1x.jpg" srcset="img/photo-sunset-mobile@2x.jpg 2x" alt="Неродные просторы">
+                  <img class="photos__image" src="img/photo-sunset-mobile@1x.jpg" srcset="img/photo-sunset-mobile@2x.jpg 2x" width="280" height="280" alt="Неродные просторы">
                 </picture>
               </a>
               <div class="photos__desc-wrap">
@@ -73,7 +68,7 @@
                   <p class="photos__author">Автор фото: Борис</p>
                 </div>
                 <div class="photos__like">
-                  <svg class="photos__like-button">
+                  <svg class="photos__like-button" width="24" height="22">
                     <use xlink:href="img/sprite.svg#icon-like"></use>
                   </svg>
                   <p class="photos__like-counter">1350</p>
@@ -83,9 +78,12 @@
             <li class="photos__item">
               <a class="photos__link" href="#">
                 <picture class="photos__picture">
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-cactus-desktop@1x.webp 1x, img/photo-cactus-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-cactus-tablet@1x.webp 1x, img/photo-cactus-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/photo-cactus-mobile@1x.webp 1x, img/photo-cactus-mobile@2x.webp 2x">
                   <source media="(min-width: 1200px)" srcset="img/photo-cactus-desktop@1x.jpg 1x, img/photo-cactus-desktop@2x.jpg 2x">
                   <source media="(min-width: 768px)" srcset="img/photo-cactus-tablet@1x.jpg 1x, img/photo-cactus-tablet@2x.jpg 2x">
-                  <img class="photos__image" src="img/photo-cactus-mobile@1x.jpg" srcset="img/photo-cactus-mobile@2x.jpg 2x" alt="Местная растительность">
+                  <img class="photos__image" src="img/photo-cactus-mobile@1x.jpg" srcset="img/photo-cactus-mobile@2x.jpg 2x" width="280" height="280" alt="Местная растительность">
                 </picture>
               </a>
               <div class="photos__desc-wrap">
@@ -94,7 +92,7 @@
                   <p class="photos__author">Автор фото: Сергей</p>
                 </div>
                 <div class="photos__like">
-                  <svg class="photos__like-button">
+                  <svg class="photos__like-button" width="24" height="22">
                     <use xlink:href="img/sprite.svg#icon-like"></use>
                   </svg>
                   <p class="photos__like-counter">143</p>
@@ -104,9 +102,12 @@
             <li class="photos__item">
               <a class="photos__link" href="#">
                 <picture class="photos__picture">
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-roads-desktop@1x.webp 1x, img/photo-roads-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-roads-tablet@1x.webp 1x, img/photo-roads-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/photo-roads-mobile@1x.webp 1x, img/photo-roads-mobile@2x.webp 2x">
                   <source media="(min-width: 1200px)" srcset="img/photo-roads-desktop@1x.jpg 1x, img/photo-roads-desktop@2x.jpg 2x">
                   <source media="(min-width: 768px)" srcset="img/photo-roads-tablet@1x.jpg 1x, img/photo-roads-tablet@2x.jpg 2x">
-                  <img class="photos__image" src="img/photo-roads-mobile@1x.jpg" srcset="img/photo-roads-mobile@2x.jpg 2x" alt="Дорога на север">
+                  <img class="photos__image" src="img/photo-roads-mobile@1x.jpg" srcset="img/photo-roads-mobile@2x.jpg 2x" width="280" height="280" alt="Дорога на север">
                 </picture>
               </a>
               <div class="photos__desc-wrap">
@@ -115,7 +116,7 @@
                   <p class="photos__author">Автор фото: Петр</p>
                 </div>
                 <div class="photos__like">
-                  <svg class="photos__like-button">
+                  <svg class="photos__like-button" width="24" height="22">
                     <use xlink:href="img/sprite.svg#icon-like"></use>
                   </svg>
                   <p class="photos__like-counter">96</p>
@@ -125,9 +126,12 @@
             <li class="photos__item">
               <a class="photos__link" href="#">
                 <picture class="photos__picture">
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-bridge-desktop@1x.webp 1x, img/photo-bridge-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-bridge-tablet@1x.webp 1x, img/photo-bridge-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/photo-bridge-mobile@1x.webp 1x, img/photo-bridge-mobile@2x.webp 2x">
                   <source media="(min-width: 1200px)" srcset="img/photo-bridge-desktop@1x.jpg 1x, img/photo-bridge-desktop@2x.jpg 2x">
                   <source media="(min-width: 768px)" srcset="img/photo-bridge-tablet@1x.jpg 1x, img/photo-bridge-tablet@2x.jpg 2x">
-                  <img class="photos__image" src="img/photo-roads-mobile@1x.jpg" srcset="img/photo-bridge-mobile@2x.jpg 2x" alt="Мост дьявола">
+                  <img class="photos__image" src="img/photo-roads-mobile@1x.jpg" srcset="img/photo-bridge-mobile@2x.jpg 2x" width="280" height="280" alt="Мост дьявола">
                 </picture>
               </a>
               <div class="photos__desc-wrap">
@@ -136,7 +140,7 @@
                   <p class="photos__author">Автор фото: Антон</p>
                 </div>
                 <div class="photos__like">
-                  <svg class="photos__like-button">
+                  <svg class="photos__like-button" width="24" height="22">
                     <use xlink:href="img/sprite.svg#icon-like"></use>
                   </svg>
                   <p class="photos__like-counter">254</p>
@@ -146,29 +150,37 @@
           </ul>
         </section>
         <section class="video">
-          <p class="video__heading heading">Все еще сомневаетесь?</p>
+          <p class="video__heading">Все еще сомневаетесь?</p>
           <p class="video__intro intro">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
           <picture class="video__picture">
+            <source type="image/webp" media="(min-width: 1200px)" srcset="img/video-desktop@1x.webp 1x, img/video-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/video-tablet@1x.webp 1x, img/video-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/video-mobile@1x.webp 1x, img/video-mobile@2x.webp 2x">
             <source media="(min-width: 1200px)" srcset="img/video-desktop@1x.jpg 1x, img/video-desktop@2x.jpg 2x">
             <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x">
-            <img class="video__image" src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x" alt="Видеопрезентация">
+            <img class="video__image" src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x" width="321" height="201" alt="Видеопрезентация">
           </picture>
           <div class="video__tracker">
-            <div class="video__scale">
-              <svg class="video__scale-slider">
+            <div class="video__settings video__settings--replay">
+              <svg class="video__icon-replay" width="16" height="20">
+                <use xlink:href="img/sprite.svg#icon-video-replay"></use>
+              </svg>
+            </div>
+            <div class="video__settings video__settings--scale">
+              <svg class="video__scale-slider" width="9" height="9">
                 <circle cx="4.5" cy="5" r="4.5" fill="white"></circle>
               </svg>
             </div>
-            <div class="video__settings"></div>
-            <svg class="video__replay">
-              <use xlink:href="img/sprite.svg#icon-video-replay"></use>
-            </svg>
-            <svg class="video__subtitles">
-              <use xlink:href="img/sprite.svg#icon-video-subtitles"></use>
-            </svg>
-            <svg class="video__fullscreen">
-              <use xlink:href="img/sprite.svg#icon-video-fullscreen"></use>
-            </svg>
+            <div class="video__settings video__settings--subtitles">
+              <svg class="video__icon-subtitles" width="32" height="20">
+                <use xlink:href="img/sprite.svg#icon-video-subtitles"></use>
+              </svg>
+            </div>
+            <div class="video__settings video__settings--fullscreen">
+              <svg class="video__icon-fullscreen" width="20" height="20">
+                <use xlink:href="img/sprite.svg#icon-video-fullscreen"></use>
+              </svg>
+            </div>
           </div>
         </section>
       </main>
@@ -208,5 +220,9 @@
         </div>
       </footer>
     </div>
+    <script src="js/object-fit.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/svg4everybody.min.js"></script>
+    <script>svg4everybody();</script>
   </body>
 </html>
