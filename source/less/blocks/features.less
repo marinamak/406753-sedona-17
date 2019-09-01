@@ -13,6 +13,7 @@
 
 .features__wrap {
   margin-left: 12px;
+  padding-right: 40px;
 }
 
 .features__list {
@@ -55,8 +56,22 @@
     padding-left: 37px;
     text-align: center;
 
-    &:nth-child(2) {
+    &--souvenirs {
       order: 2;
+    }
+
+    &--food {
+      .features__description{
+        padding-right: 5px;
+        padding-left: 5px;
+      }
+    }
+
+    &--house {
+      .features__description{
+        padding-right: 10px;
+        padding-left: 10px;
+      }
     }
   }
 
@@ -67,9 +82,11 @@
 
   .features__wrap {
     margin: 0;
+    padding-right: 0;
   }
 
   .features__title {
+    font-size: 21px;
     margin: 0;
     margin-bottom: 28px;
   }
@@ -83,5 +100,12 @@
   .features__item {
     width: 400px;
     padding-bottom: 83px;
+
+    &--souvenirs {
+      .features__description {
+        padding-right: 65px;
+        padding-left: 65px;
+      }
+    }
   }
 }

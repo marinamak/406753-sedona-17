@@ -49,6 +49,8 @@
 .main-content__heading {
   margin: 0;
   margin-bottom: 35px;
+  padding-right: 30px;
+  padding-left: 30px;
   font-size: 18px;
   text-align: center;
 }
@@ -59,6 +61,11 @@
   &--form {
     line-height: 24px;
   }
+}
+
+.main-content__search {
+  padding-right: 20px;
+  padding-left: 20px;
 }
 
 @media (min-width: @tablet-width) {
@@ -76,6 +83,13 @@
 
     &::after {
       content: "";
+    }
+  }
+
+  .main-content__intro {
+    &--form {
+      padding-right: 25px;
+      padding-left: 25px;
     }
   }
 
@@ -109,6 +123,13 @@
 
     &::before {
       content: url("../img/bg-intro-triangle-desktop.svg");
+    }
+  }
+
+  .main-content__intro {
+    &--form {
+      padding-right: 50px;
+      padding-left: 50px;
     }
   }
 
