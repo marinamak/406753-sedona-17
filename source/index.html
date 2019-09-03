@@ -175,7 +175,14 @@
         </div>
       </footer>
     </div>
-    <script src="js/object-fit.js"></script>
+    <script src="js/polyfill.object-fit.js"></script>
+    <script>
+      objectFit.polyfill({
+        selector: 'img',
+        fittype: 'cover',
+        disableCrossDomain: 'true'
+      });
+    </script>
     <script src="js/navigation.js"></script>
     <script src="js/svg4everybody.min.js"></script>
     <script>svg4everybody();</script>

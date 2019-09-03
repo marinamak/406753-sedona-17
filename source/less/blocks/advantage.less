@@ -114,6 +114,7 @@
   .advantage--secondary {
     margin: 0;
     padding: 48px 35px;
+    padding-top: 40px;
     width: 256px;
     min-height: 256px;
     border-bottom: none;
@@ -132,15 +133,18 @@
 }
 
 @media (min-width: @desktop-width) {
-  .advantage__content {
-    width: 400px;
+  .advantage--lead {
+    .advantage__content {
+      width: 400px;
 
-    &--city {
-      padding: 58px 60px;
-    }
+      &--city {
+        padding: 60px;
+        padding-top: 50px;
+      }
 
-    &--bridge {
-      padding: 58px 85px;
+      &--bridge {
+        padding: 58px 85px;
+      }
     }
   }
 
@@ -157,6 +161,7 @@
   }
 
   .advantage--secondary {
+    padding-bottom: 68px;
     width: 400px;
 
     .advantage__title {

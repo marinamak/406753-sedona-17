@@ -1,7 +1,7 @@
 .photos__wrap {
   position: relative;
   padding-top: 43px;
-  padding-bottom: 32px;
+  padding-bottom: 25px;
   border-bottom: 1px solid #e5e5e5;
 
   &::before {
@@ -29,6 +29,7 @@
 .photos__list {
   display: flex;
   flex-direction: column;
+  margin: 0;
   padding: 0;
   list-style: none;
 }
@@ -55,11 +56,14 @@
 .photos__desc-wrap {
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  padding-top: 5px;
+  padding-bottom: 17px;
+  padding-right: 20px;
+  padding-left: 20px;
 }
 
 .photos__desc {
-  margin-bottom: 11px;
+  margin-bottom: 7px;
 }
 
 .photos__title {
@@ -97,11 +101,12 @@
 @media (min-width: @tablet-width) {
   .photos__wrap {
     padding: 70px 145px;
+    padding-top: 75px;
     border-bottom: none;
 
     &::before {
       content: url("../img/bg-intro-triangle-tablet.svg");
-      top: -57px;
+      top: -56px;
     }
   }
 
@@ -132,9 +137,15 @@
     flex-direction: row;
     justify-content: space-between;
     min-height: 80px;
-    padding: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 32px;
     box-sizing: border-box;
     background-color: #f2f2f2;
+
+    &--lead {
+      padding-right: 20px;
+    }
   }
 
   .photos__item {
@@ -145,6 +156,10 @@
     &--lead {
       width: 100%;
     }
+  }
+
+  .photos__title {
+    margin: 0;
   }
 
   .photos__desc {
@@ -158,11 +173,15 @@
   .photos__like-button {
     fill: #a9a9a9;
   }
+
+  .photos__like-counter {
+    margin-left: 12px;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .photos__wrap {
-    padding-top: 108px;
+    padding-top: 115px;
     padding-right: 360px;
     padding-left: 360px;
 
